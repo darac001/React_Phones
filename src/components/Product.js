@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { formatPrice } from "../utils/helpers";
+
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
   // props from featured products
-  const { image, name, price, id } = props;
+  const { image, name, id } = props;
 
   return (
     <Wrapper>

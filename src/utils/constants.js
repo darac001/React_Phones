@@ -1,5 +1,5 @@
-import React from 'react'
-import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+
+
 import services1 from '../assets/services-1.svg'
 import services2 from '../assets/services-2.svg'
 import services3 from '../assets/services-3.svg'

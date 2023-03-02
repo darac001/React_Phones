@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import bcgHero from '../assets/bcg-hero.jpg'
-import FunkyArrow from './FunkyArrow'
+
 const Hero = () => {
   return (
     

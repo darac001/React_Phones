@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Error from './Error'
 import Loading from './Loading'
 import Product from './Product'
-import arrowright from "../assets/arrow-right.svg";
+
 import FunkyArrow from './FunkyArrow'
 
 const FeaturedProducts = () => {

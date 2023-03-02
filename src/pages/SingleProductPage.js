@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { single_product_url } from "../utils/constants";
 import { formatPrice } from "../utils/helpers";
-import { FunkyArrow } from "../components";
-import arrow from "../assets/Arrow.svg";
+
+
 import {
   Loading,
   Error,
   ProductImages,
   AddToCart,
 
-  PageHero,
 } from "../components";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 
 const SingleProductPage = () => {
-  const titleArrow = "Products"
-  const arrowRight = false
+  
+  
 
   const { id } = useParams();
   // see App.js products/:id url

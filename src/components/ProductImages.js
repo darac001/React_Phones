@@ -17,10 +17,10 @@ const ProductImages = (props) => {
               <div className={`${image.url === main.url ? "thumb active" : "thumb"}`} onMouseEnter={() => setMain(images[index])}>
                 <img
                   src={image.url}
-
+                  alt="thumb image"
                   key={index}
-                  
-                  
+
+
                   className={`${image.url === main.url ? "active" : null}`}
                 />
               </div>

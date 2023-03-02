@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PageHero } from '../components'
 import aboutImg from "../assets/about.jpg";
 
 const AboutPage = () => {
   return (
     <main>
-      
+
       <Wrapper className="page section section-center">
-          <div className="title-about">
-            <h2>about us</h2>
-            <div className="underline"></div>
-          </div>
+        <div className="title-about">
+          <h2>about us</h2>
+          <div className="underline"></div>
+        </div>
         <article>
           <p>
             Welcome to our company! We are dedicated to providing our customers with the best possible shopping experience, whether you're looking for a new phone or accessories to enhance your mobile device.
@@ -21,7 +20,7 @@ const AboutPage = () => {
             Whether you're looking for the latest iPhone or Samsung Galaxy, or need accessories like cases, chargers, or screen protectors, we have everything you need to keep your phone running smoothly and looking great.
             Thank you for choosing our company as your go-to source for all your mobile needs. We look forward to serving you!
           </p>
-        <img src={aboutImg}  />
+          <img src={aboutImg} alt="about"/>
         </article>
       </Wrapper>
     </main>
