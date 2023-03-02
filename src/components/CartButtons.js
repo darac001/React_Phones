@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { useProductsContext } from "../context/products_context";
 import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
-import carticon from '../assets/cart-icon.png';
-import logouticon from '../assets/logout-icon.png';
-import loginicon from '../assets/login-icon.png';
+import carticon from '../assets/cart.svg';
+import usericon from '../assets/user.svg';
+
 
 const CartButton = () => {
   const { closeSidebar } = useProductsContext();
@@ -18,7 +18,7 @@ const CartButton = () => {
       <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         <span className="cart-container">
           <img id="cart" src={carticon} alt="" />
-          {/* <FaShoppingCart /> */}
+         
           <span className="cart-value">{total_items}</span>
         </span>
       </Link>
@@ -31,12 +31,12 @@ const CartButton = () => {
             clearCart();
           }}
         >
-          LOGOUT <img className="logoutin" src={logouticon} alt="" />
+        <img className="logoutin" src={usericon} alt="" />Logout
           
         </button>
       ) : (
         <button type="button" className="auth-btn" onClick={loginWithRedirect}>
-          LOGIN <img className="logoutin" src={loginicon} alt="" />
+          <img className="logoutin" src={usericon} alt="" />Login
           
         </button>
       )}
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 160px;
+  width: 140px;
 
   .cart-btn {
     color: var(--clr-grey-1);
@@ -63,28 +63,27 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     position: relative;
-    svg {
-      height: 1.2rem;
-      margin-left: 5px;
-    }
+ 
     #cart {
-      width: 2.5rem;
+      width: 1.5rem;
+      color: black;
     }
   }
   .cart-value {
     position: absolute;
-    top: -10px;
+    top: 10px;
     right: -16px;
     background: var(--clr-primary-5);
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    border: solid 1px var(--clr-white);
     font-size: 0.75rem;
     color: var(--clr-white);
-    padding: 12px;
+    padding: 10px;
   }
   .auth-btn {
     display: flex;
@@ -92,16 +91,14 @@ const Wrapper = styled.div`
     background: transparent;
     border-color: transparent;
     font-size: 1rem;
-    margin: 3rem;
+    margin: 0rem;
     cursor: pointer;
     color: var(--clr-grey-1);
     letter-spacing: var(--spacing);
-    svg {
-      margin-left: 5px;
-    }
+    
     .logoutin {
-      width: 1.5rem;
-      margin-left: 5px;
+      width: 1.2rem;
+      margin-right: 0.2rem;
     }
   }
 `;

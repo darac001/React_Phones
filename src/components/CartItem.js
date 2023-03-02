@@ -45,26 +45,27 @@ const Wrapper = styled.article`
   }
   display: grid;
   grid-template-columns: 200px auto auto;
-  grid-template-rows: 75px;
-  gap: 3rem 1rem;
+  grid-template-rows: 55px;
+  gap: 1rem;
   justify-items: center;
   margin-bottom: 3rem;
   align-items: center;
   .title {
     grid-template-rows: 75px;
     display: grid;
-    grid-template-columns: 75px 125px;
+    grid-template-columns: 10px 125px;
     align-items: center;
     text-align: left;
     gap: 1rem;
   }
   img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: var(--radius);
+    max-width: 100%;
+    max-height: 100%;
+    display: block;    
     object-fit: cover;
   }
+ 
+
   h5 {
     font-size: 0.75rem;
     margin-bottom: 0;

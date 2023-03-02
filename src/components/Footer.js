@@ -107,7 +107,7 @@ const Wrapper = styled.footer`
   }
   .social-icons {
     color: #94a3b8;
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
@@ -126,7 +126,7 @@ const Wrapper = styled.footer`
       }
       a {
         color: var(--clr-grey-7);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
@@ -136,7 +136,7 @@ const Wrapper = styled.footer`
       }
     }
     img {
-      width: 350px;
+      width: 300px;
     }
   }
 `;

@@ -9,66 +9,93 @@ const ProductImages = (props) => {
   // console.log(main);
   return (
     <Wrapper>
-      <img src={main.url} alt="main" className="main" />
-      <div className="gallery">
-        {images.map((image, index) => {
-          return (
-            <img
-              src={image.url}
-              alt={image.filename}
-              key={index}
-              // change large main photo and highlight which photo is active
-              onClick={() => setMain(images[index])}
-              className={`${image.url === main.url ? "active" : null}`}
-            />
-          );
-        })}
+      <div className='image-container'>
+
+        <div className="gallery">
+          {images.map((image, index) => {
+            return (
+              <div className={`${image.url === main.url ? "thumb active" : "thumb"}`} onMouseEnter={() => setMain(images[index])}>
+                <img
+                  src={image.url}
+
+                  key={index}
+                  
+                  
+                  className={`${image.url === main.url ? "active" : null}`}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <img src={main.url} alt="main" className="main" />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  .main {
-    height: 600px;
+  .main {    
+    height: 150px;
+  }
+  .image-container{
+    display: flex;
+  }
+  .thumb{
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--clr-grey-8);
   }
   img {
-    width: 100%;
-    display: block;
-    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 100%;
     object-fit: cover;
   }
   .gallery {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    justify-self: start;
+    grid-template-columns: repeat(100px);   
     column-gap: 1rem;
-    img {
-      height: 100px;
+    img {      
       cursor: pointer;
     }
   }
   .active {
-    box-shadow: 0px 0px 0px 2px var(--clr-primary-5);
+    box-shadow: 0px 0px 15px 1px #685D0A;
   }
   @media (max-width: 576px) {
     .main {
-      height: 300px;
+      height: 250px;
     }
-    .gallery {
-      img {
-        height: 50px;
-      }
-    }
+  
   }
   @media (min-width: 992px) {
     .main {
-      height: 500px;
+      object-fit: cover;
+      height:400px ;
     }
-    .gallery {
-      img {
-        height: 75px;
-      }
+    .thumb{
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid red; */
+  }
+  img {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery {
+    margin-top: 1rem;
+    display: grid;
+    justify-self: start;
+    grid-template-columns: repeat(100px);   
+    column-gap: 1rem;
+    img {      
+      cursor: pointer;
     }
   }
 `

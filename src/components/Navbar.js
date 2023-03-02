@@ -45,7 +45,7 @@ const Nav = () => {
 };
 
 const NavContainer = styled.nav`
-  height: 6rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,7 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 240px;
+      width: 200px;
     }
     padding-top: 1rem;
   }

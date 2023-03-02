@@ -1,5 +1,9 @@
 import React from 'react'
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+import services1 from '../assets/services-1.svg'
+import services2 from '../assets/services-2.svg'
+import services3 from '../assets/services-3.svg'
+import services4 from '../assets/services-4.svg'
 export const links = [
   {
     id: 1,
@@ -21,27 +25,34 @@ export const links = [
 export const services = [
   {
     id: 1,
-    icon: <GiCompass />,
-    title: 'mission',
+    icon: services1,
+    title: 'buy',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Check out our wide variety of Certified Pre-Owned phones that work like new and come with an industry-leading 1-year warranty.',
   },
   {
     id: 2,
-    icon: <GiDiamondHard />,
-    title: 'vision',
+    icon: services2,
+    title: 'repair',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'All of our cell phone and tablet repairs are performed by certified, expert technicians with premium-quality-parts and most are backed by a lifetime warranty and done in an hour.',
   },
   {
     id: 3,
-    icon: <GiStabbedNote />,
-    title: 'history',
+    icon: services3,
+    title: 'connect',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'We offer a full range of rate plans from leading Canadian wireless carriers.',
+  },
+  {
+    id: 4,
+    icon: services4,
+    title: 'trade-in',
+    text:
+      'When it’s time to purchase a new device, sell us your old one. We will buy most makes and models for top dollar.',
   },
 ]
 
-export const products_url = 'https://course-api.com/react-store-products'
+export const products_url = '/.netlify/functions/products';
 
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+export const single_product_url = `/.netlify/functions/single-product?id=`;

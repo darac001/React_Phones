@@ -54,7 +54,7 @@ const AddToCart = (props) => {
         />
         <Link
           to="/cart"
-          className="btn"
+          className="btn hero-btn"
           onClick={() => addToCart(id, mainColor, amount,single_product)}
         >
           add to cart
@@ -104,9 +104,12 @@ const Wrapper = styled.section`
     margin-top: 2rem;
   }
 
-  .btn {
-    margin-top: 1rem;
-    width: 140px;
-  }
+
+  .hero-btn {
+    padding: 0.75rem 2rem;
+      font-size: 0.9rem;
+      margin: 0;
+      
+    }
 `;
 export default AddToCart;

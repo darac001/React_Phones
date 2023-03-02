@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { PageHero, StripeCheckout } from "../components";
-
-// extra imports
-
 import { useCartContext } from "../context/cart_context";
 import { Link } from "react-router-dom";
 
@@ -12,7 +9,7 @@ const CheckoutPage = () => {
 
   return (
     <main>
-      <PageHero title="checkout" />
+      <PageHero title="checkout" class1="section-center-cart" />
       <Wrapper className="page">
         {cart.length < 1 ? (
           <div className="empty">
@@ -29,6 +26,7 @@ const CheckoutPage = () => {
   );
 };
 const Wrapper = styled.div`
+margin-bottom: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;

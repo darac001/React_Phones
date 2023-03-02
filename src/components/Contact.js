@@ -8,13 +8,11 @@ const Contact = () => {
         <h3>Join our newsletter and get 20% off</h3>
         <div className="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            veniam repudiandae vel ab id, fuga praesentium nobis natus ipsam
-            vero?
+            Be the first to know about our latest updates, special offers, and exclusive content. Sign up for our newsletter today and stay connected with us. You'll receive regular emails from us with all the latest news and updates on our products and services.
           </p>
           <form
             className="contact-form"
-            action="form spree optional"
+            action="https://formspree.io/f/xbjeyadq"
             method="POST"
           >
             <input
@@ -33,7 +31,8 @@ const Contact = () => {
   );
 }
 const Wrapper = styled.section`
-  padding: 5rem 0;
+margin:2rem 0rem;
+    margin-bottom: 5rem;
   h3 {
     text-transform: none;
   }
@@ -53,11 +52,11 @@ const Wrapper = styled.section`
   .submit-btn {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    border: 1px solid var(--clr-grey-6);
   }
   .form-input {
     border-right: none;
-    color: var(--clr-grey-3);
+    color: var(--clr-grey-8);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
   }
@@ -66,7 +65,7 @@ const Wrapper = styled.section`
     border-bottom-right-radius: var(--radius);
   }
   .form-input::placeholder {
-    color: var(--clr-black);
+    color: var(--clr-grey-6);
     text-transform: capitalize;
   }
   .submit-btn {
@@ -75,10 +74,11 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
   }
   .submit-btn:hover {
     color: var(--clr-white);
+    background-color: var(--clr-primary-4);
   }
   @media (min-width: 992px) {
     .content {
@@ -86,14 +86,15 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 8rem;
-      margin-top: 2rem;
+      
     }
     p {
       margin-bottom: 0;
     }
   }
   @media (min-width: 1280px) {
-    padding: 15rem 0;
+    margin:5rem 10rem;
+    margin-bottom: 10rem;
   }
 `
 

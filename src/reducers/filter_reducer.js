@@ -66,6 +66,7 @@ const filter_reducer = (state, action) => {
     const { name, value } = action.payload;
     // dynamic object keys, [name] is text as set in search input and value is value
     // https://www.youtube.com/watch?v=_qxCYtWm0tw&ab_channel=CodingAddict
+    
     return { ...state, filters: { ...state.filters, [name]: value } };
   }
   if (action.type === FILTER_PRODUCTS) {
@@ -89,17 +90,18 @@ const filter_reducer = (state, action) => {
       );
     }
     if (color !== "all") {
-      // tempProducts = tempProducts.filter((product) => {
-      //   return product.colors.find((c) => c === color);
-      // });
-      // console.log(tempProducts);
-
-      // or, I like this better
-
-      tempProducts = tempProducts.filter((item) => {
-        return item.colors.indexOf(color) >= 0;
+      tempProducts = tempProducts.filter((product) => {
+        console.log(tempProducts);
+        return product.colors.find((c) => c === color);
       });
       console.log(tempProducts);
+
+      // or, doesn't work well
+
+      // tempProducts = tempProducts.filter((item) => {
+      //   return item.colors.indexOf(color) >= 0;
+      // });
+      // console.log(tempProducts);
     }
     // filter by price
     tempProducts = tempProducts.filter((product) => product.price <= price);

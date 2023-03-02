@@ -5,7 +5,8 @@ import { Filters, ProductList, Sort, PageHero } from '../components'
 const ProductsPage = () => {
   return (
     <main>
-      <PageHero title="products" />
+      <PageHero title="products" class1="section-center"/>
+      
       <Wrapper className="page">
         <div className="section-center products">
           <Filters />
@@ -23,7 +24,8 @@ const Wrapper = styled.div`
   .products {
     display: grid;
     gap: 3rem 1.5rem;
-    margin: 4rem auto;
+    margin: 1rem auto;
+    margin-bottom: 8rem;
   }
   @media (min-width: 768px) {
     .products {

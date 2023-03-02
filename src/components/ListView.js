@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { formatPrice } from "../utils/helpers";
 import { Link } from "react-router-dom";
+import { FunkyArrowSmall } from "../components";
 const ListView = ({ filtered_products }) => {
+  const titleArrow = "details"
+  const arrowRight = true
   return (
     <Wrapper>
       {filtered_products.map((product) => {
@@ -13,9 +16,11 @@ const ListView = ({ filtered_products }) => {
             <div>
               <h4>{name}</h4>
               <h5 className="price">{formatPrice(price)}</h5>
-              <p>{description.substring(0, 150)}...</p>
-              <Link to={`/products/${id}`} className="btn">
-                Details
+              <p className="overview">Overview:</p>
+              <p>{description}...</p>
+
+              <Link to={`/products/${id}`} className="arrow" >
+                <FunkyArrowSmall title={titleArrow} arrow={arrowRight} />
               </Link>
             </div>
           </article>
@@ -28,16 +33,21 @@ const ListView = ({ filtered_products }) => {
 const Wrapper = styled.section`
   display: grid;
   row-gap: 3rem;
-
-  img {
-    width: 100%;
-    display: block;
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--radius);
-    margin-bottom: 1rem;
+  article{
+    height: 350px;
+   
   }
+.overview{
+  margin-bottom: 0rem;
+}
+  img {
+    height: 300px;
+    display: block;
+    margin: auto;
+    padding: 0;
+    object-fit: cover;
+  }
+
   h4 {
     margin-bottom: 0.5rem;
   }
@@ -56,7 +66,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     article {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 1fr 2fr;
       column-gap: 2rem;
       align-items: center;
     }

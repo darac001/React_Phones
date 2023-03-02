@@ -59,14 +59,14 @@ export const FilterProvider = ({ children }) => {
   const updateFilters = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    // console.log(value,name);
+    console.log(name);
     if (name === "category") {
       value = e.target.textContent;
-      // console.log(value);
+      console.log(value);
     }
     if (name === "color") {
       value = e.target.dataset.color;
-      // console.log(e.target.dataset);
+      console.log(e.target.dataset.color);
     }
     if (name === "price") {
       value = Number(value);

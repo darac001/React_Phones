@@ -17,7 +17,8 @@ import Promo from './Promo'
 import CartContent from './CarContent'
 import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
-
+import FunkyArrow from './FunkyArrow'
+import FunkyArrowSmall from './FunkyArrowSmall'
 
 export {
   FeaturedProducts,
@@ -39,5 +40,7 @@ export {
   CartContent,
   PageHero,
   StripeCheckout,
+  FunkyArrow,
+  FunkyArrowSmall
 
 }

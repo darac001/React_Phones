@@ -9,7 +9,7 @@ const CartContent = () => {
   const { cart, clearCart } = useCartContext();
 
   return (
-    <Wrapper className="section section-center">
+    <Wrapper className="section-center-cart">
       <CartColumns />
       {cart.map((item) => {
         return <CartItem key={item.id} {...item} />;
@@ -32,16 +32,18 @@ const CartContent = () => {
   );
 };
 const Wrapper = styled.section`
+margin-bottom: 10rem;
   .link-container {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
   }
+  
   .link-btn {
     background: transparent;
     border-color: transparent;
     text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 1.5rem;
     background: var(--clr-primary-5);
     color: var(--clr-white);
     border-radius: var(--radius);

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const CartTotals = () => {
   const { total_amount } = useCartContext();
-  const { myUser} = useUserContext();
+  const { loginWithRedirect, myUser } = useUserContext();
 
   return (
     <Wrapper>
@@ -29,8 +29,8 @@ const CartTotals = () => {
             proceed to checkout
           </Link>
         ) : ( 
-          <button  className="btn">
-            login
+          <button  className="btn" onClick={loginWithRedirect}>
+            login for chekcout
           </button>
         )}
       </div>
@@ -64,6 +64,7 @@ const Wrapper = styled.section`
   }
   .btn {
     width: 100%;
+    border: none;
     margin-top: 1rem;
     text-align: center;
     font-weight: 700;

@@ -5,10 +5,14 @@ import styled from 'styled-components'
 import Error from './Error'
 import Loading from './Loading'
 import Product from './Product'
+import arrowright from "../assets/arrow-right.svg";
+import FunkyArrow from './FunkyArrow'
 
 const FeaturedProducts = () => {
   const { products_loading, products_error, featured_products } =
     useProductsContext();
+    const titleArrow = "products"
+    const arrowRight = true
   if (products_loading) {
     return <Loading />;
   }
@@ -20,7 +24,7 @@ const FeaturedProducts = () => {
       <div className="title"></div>
       <div className="section-center">
         <div className="line"></div>
-        <h1>See our featured products</h1>
+        <h1>See our featured products </h1>
       </div>
 
       <div className="section-center featured">
@@ -28,16 +32,20 @@ const FeaturedProducts = () => {
         {featured_products.slice(0, 6).map((product) => {
           return <Product key={product.id} {...product} />;
         })}
+      <Link to="/products" className='prod-link'>
+        <FunkyArrow title={titleArrow} arrow={arrowRight} />
+        </Link>
       </div>
-      <Link to="/products" className="btn">
-        all products
-      </Link>
+  
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
+  text-align: center;
+  padding-bottom: 0.1rem;
+ 
   h1 {
     font-size: 3.5rem;
     font-weight: 100;
@@ -52,11 +60,26 @@ const Wrapper = styled.section`
       height: 225px;
     }
   }
-  .btn {
-    display: block;
-    width: 148px;
+  .btn-arrow {
+   
+    width: 300px;
     margin: 0 auto;
-    text-align: center;
+    
+  }
+  .arrow{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h5{
+      color: var(--clr-primary-5);
+      font-size: 1.5rem;
+      margin: 0;
+      padding-top: 1rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+  .arrow-img{
+    width: 30px;
   }
   .line {
     color: var(--clr-grey-6);
@@ -64,8 +87,9 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
   }
   @media (min-width: 576px) {
+    text-align: left;
     .featured {
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
   }
 `;

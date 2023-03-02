@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import bcgHero from '../assets/bcg-hero.jpg'
-
+import FunkyArrow from './FunkyArrow'
 const Hero = () => {
   return (
     
@@ -10,13 +10,14 @@ const Hero = () => {
         <article className="content">
           <h1>
             Phones are everything.
-            <br />
+            <br/>   
             But people are people.
           </h1>
           <p>That's why we are here.</p>
           <Link to="/products" className="btn hero-btn">
             shop now
           </Link>
+          
         </article>
 
       </Wrapper>
@@ -27,69 +28,59 @@ const Hero = () => {
 const Wrapper = styled.section`
   min-height: 70vh;
   display: grid;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${bcgHero}) center/cover no-repeat;
+text-align: center;
+margin: auto;
   color: white;
   place-items: center;
-  padding-left: 10rem;
-  .img-container {
-    display: none;
-  }
-
+  padding-right: 0rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${bcgHero}) center/cover no-repeat;
+      .hero-btn {
+      padding: 0.65rem 1.8rem;
+      font-size: 0.8rem;
+      margin: 0;
+    }
   p {
     line-height: 2;
-    max-width: 45em;
+    max-width: 45rem;
     margin-bottom: 2rem;
-    color: var(--clr-grey-5);
+    color: var(--clr-grey-10);
     font-size: 1rem;
   }
   @media (min-width: 992px) {
+    padding-right: 40rem;
     height: calc(70vh - 10rem);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${bcgHero}) center/cover no-repeat;
-    grid-template-columns: 1fr 1fr;
+      display: grid;
+    grid-template-columns: 1fr;
     gap: 8rem;
+    text-align: left;
     h1 {
       margin-bottom: 2rem;
-      font-size: 5rem;
+      font-size: 5.5rem;
+      font-weight: 600;
     }
     p {
       font-size: 1.6rem;
     }
     .hero-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      padding: 0.75rem 2rem;
+      font-size: 0.9rem;
+      margin: 0;
     }
     .img-container {
       display: block;
       position: relative;
     }
-    .main-img {
-      width: 100%;
-      height: 550px;
-      position: relative;
-      border-radius: var(--radius);
-      display: block;
-      object-fit: cover;
-    }
-    .accent-img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 250px;
-      transform: translateX(-50%);
-      border-radius: var(--radius);
-    }
-    .img-container::before {
-      content: "";
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
-    }
+    p {
+    line-height: 2;
+    max-width: 45rem;
+    margin-bottom: 2rem;
+    color: var(--clr-grey-10);
+    font-size: 1rem;
+  }
+
   }
 `;
 

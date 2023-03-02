@@ -5,11 +5,13 @@ import reducer from "../reducers/sidebar_reducer.js";
 import {
   SIDEBAR_OPEN,
   SIDEBAR_CLOSE,
+  
 
 } from "../actions";
 
 const initialState = {
   isSidebarOpen: false,
+  
 };
 
 const SidebarContext = React.createContext();

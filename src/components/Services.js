@@ -4,25 +4,21 @@ import { services } from '../utils/constants'
 
 const Services = () => {
   return (
-    <Wrapper>
+    <Wrapper className='section'>
       <div className="section-center">
-        <article className="header">
-          <h3>
-            custom furniture <br />
-            built only for you
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            quisquam saepe id reiciendis sunt, repudiandae libero amet rem quia
-            quod?
-          </p>
-        </article>
+      <div className="title"></div>
+      <div className="section-center">
+        <div className="line"></div>
+        <h1>What we offer</h1>
+      </div>
         <div className="services-center">
           {services.map((service) => {
             const { id, icon, title, text } = service;
             return (
               <article key={id} className="service">
-                <span className="icon">{icon} </span>
+                {/* <span className="icon">{icon}</span> */}
+                <span className="icon"><img src={icon}></img></span>
+                
                 <h4>{title}</h4>
                 <p>{text}</p>
               </article>
@@ -35,51 +31,80 @@ const Services = () => {
 }
 
 const Wrapper = styled.section`
+padding-top: 10px !important;
+text-align: center;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 100;
+    font-family: "Hind", sans-serif;
+  }
   h3,
   h4 {
-    color: var(--clr-primary-1);
+    color: var(--clr-primary-5);
+    padding-left: 2rem;
   }
   padding: 5rem 0;
-
-  background: var(--clr-primary-10);
+  .line {
+    color: var(--clr-grey-6);
+    border: 1.5px solid var(--clr-grey-6);
+    margin-bottom: 1rem;
+  }
+  background: var(--clr-grey-10);
 
   .header h3 {
     margin-bottom: 2rem;
   }
   p {
+    padding-left:2rem;
     margin-bottom: 0;
-    line-height: 1.8;
+    line-height: 1.6;
+    font-size: 1.1rem;
     color: var(--clr-primary-3);
   }
   .services-center {
     margin-top: 4rem;
     display: grid;
-    gap: 2.5rem;
+    gap: 1rem;
   }
   .service {
-    background: var(--clr-primary-7);
+    
     text-align: center;
     padding: 2.5rem 2rem;
-    border-radius: var(--radius);
+    
     p {
       color: var(--clr-primary-2);
+      padding: 0;
     }
+    h4{
+      padding: 0;
+      margin: 0;
+    }
+    span {
+
+img {
+  padding-right: 1.6rem;
+  
+}
+}
   }
   span {
-    width: 4rem;
-    height: 4rem;
-    display: grid;
-    margin: 0 auto;
-    place-items: center;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    background: var(--clr-primary-10);
-    color: var(--clr-primary-1);
-    svg {
-      font-size: 2rem;
+
+    img {
+      height: 150px;
+      margin-bottom: 1rem;
+      
     }
   }
   @media (min-width: 992px) {
+    text-align: left;
+    .service {
+    
+    text-align: left;
+    padding: 2.5rem 2rem;
+    
+    p {
+      color: var(--clr-primary-2);
+    }
     .header {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -87,13 +112,13 @@ const Wrapper = styled.section`
   }
   @media (min-width: 576px) {
     .services-center {
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
   @media (min-width: 1280px) {
     padding: 0;
     .section-center {
-      transform: translateY(5rem);
+      transform: translateY(1rem);
     }
   }
 `
