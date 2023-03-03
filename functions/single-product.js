@@ -1,13 +1,13 @@
 require('dotenv').config();
 
-const Airtable = require('airtable-node');
+import Airtable from 'airtable-node';
 
 
 const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
   .base(process.env.REACT_APP_AIRTABLE_BASE)
   .table(process.env.REACT_APP_AIRTABLE_TABLE);
 
-exports.handler = async (event, context, cb) => {
+export async function handler(event, context, cb) {
   const { id } = event.queryStringParameters;
   if (id) {
     try {
@@ -34,7 +34,7 @@ exports.handler = async (event, context, cb) => {
     statusCode: 400,
     body: 'Please provide product id',
   };
-};  return {
+}  return {
     statusCode: 200,
     body:'single products route'
   }
