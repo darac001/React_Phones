@@ -1,7 +1,11 @@
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
+
+require('dotenv').config();
 
 const Airtable = require('airtable-node');
+
+
 const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
   .base(process.env.REACT_APP_AIRTABLE_BASE)
   .table(process.env.REACT_APP_AIRTABLE_TABLE);

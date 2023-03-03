@@ -10,7 +10,6 @@ const ProductImages = (props) => {
   return (
     <Wrapper>
       <div className='image-container'>
-
         <div className="gallery">
           {images.map((image, index) => {
             return (
@@ -19,8 +18,6 @@ const ProductImages = (props) => {
                   src={image.url}
                   alt="thumb"
                   key={index}
-
-
                   className={`${image.url === main.url ? "active" : null}`}
                 />
               </div>
