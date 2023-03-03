@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-import Airtable from 'airtable-node';
+const Airtable = require('airtable-node');
 
 
 const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
