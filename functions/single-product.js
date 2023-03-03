@@ -7,7 +7,8 @@ const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
   .base(process.env.REACT_APP_AIRTABLE_BASE)
   .table(process.env.REACT_APP_AIRTABLE_TABLE);
 
-export async function handler(event, context, cb) {
+  exports.handler = async function (event, context, cb){
+    // console.log(event.queryStringParameters);
   const { id } = event.queryStringParameters;
   if (id) {
     try {
@@ -33,8 +34,6 @@ export async function handler(event, context, cb) {
   return {
     statusCode: 400,
     body: 'Please provide product id',
+  }  
   };
-}  return {
-    statusCode: 200,
-    body:'single products route'
-  }
+
