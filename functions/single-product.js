@@ -1,10 +1,11 @@
+require('dotenv').config();
 
-const Airtable = require('airtable-node');
+import Airtable from 'airtable-node';
 
 
-const airtable = new Airtable({ apiKey: "keyIV7ZgNlFyVnjiq" })
-  .base("appuBBEHavtAWzq43")
-  .table("products");
+const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
+  .base(process.env.REACT_APP_AIRTABLE_BASE)
+  .table(process.env.REACT_APP_AIRTABLE_TABLE);
 
 export async function handler(event, context, cb) {
   const { id } = event.queryStringParameters;
