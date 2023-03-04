@@ -28,7 +28,7 @@ const AboutPage = () => {
 };
 
 const Wrapper = styled.section`
-padding-bottom: 20rem;
+
   article{
 
     display: grid;
@@ -56,6 +56,7 @@ padding-bottom: 20rem;
     margin-left: 0;
   }
   @media (min-width: 992px) {
+    padding-bottom: 20rem;
     article{
       gap: 8rem;
       grid-template-columns: 1fr 1fr;

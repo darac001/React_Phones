@@ -34,18 +34,18 @@ const Wrapper = styled.section`
   display: grid;
   row-gap: 3rem;
   article{
-    height: 350px;
+    height: 400px;
    
   }
 .overview{
   margin-bottom: 0rem;
 }
   img {
-    height: 300px;
-    display: block;
-    margin: auto;
+    height: 100px;
+    
+    
     padding: 0;
-    object-fit: cover;
+    
   }
 
   h4 {
@@ -64,11 +64,19 @@ const Wrapper = styled.section`
     padding: 0.25rem 0.5rem;
   }
   @media (min-width: 992px) {
+    img {
+    height: 300px;
+    display: block;
+    margin: auto;
+    padding: 0;
+    object-fit: cover;
+  }
     article {
       display: grid;
       grid-template-columns: 1fr 2fr;
       column-gap: 2rem;
       align-items: center;
+      height: 350px;
     }
   }
 `;
