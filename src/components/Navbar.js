@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/MOBILE-LOGO.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -62,7 +62,7 @@ const NavContainer = styled.nav`
     img {
       width: 200px;
     }
-    padding-top: 1rem;
+    
   }
   .nav-toggle {
     background: transparent;

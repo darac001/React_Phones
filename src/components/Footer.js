@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo2 from "../assets/logo2.svg";
+import logo2 from "../assets/MOBILE-LOGO2.svg";
 import { links } from "../utils/constants";
 import { BsInstagram, BsFacebook, BsMessenger } from "react-icons/bs";
 
@@ -49,6 +49,7 @@ const Footer = () => {
 };
 
 const Wrapper = styled.footer`
+z-index: 1;
   height: 13rem;
   display: flex;
   position: relative;
@@ -112,6 +113,8 @@ const Wrapper = styled.footer`
     gap: 2rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
+    padding: 0rem 1rem;
+    
     a {
       color: #94a3b8;
     }

@@ -4,9 +4,11 @@ import aboutImg from "../assets/about.jpg";
 
 const AboutPage = () => {
   return (
-    <main>
+    
+    <Wrapper >
+        <div className='main-b'>
+          <div className=" main-b page section section-center">
 
-      <Wrapper className="page section section-center">
         <div className="title-about">
           <h2>about us</h2>
           <div className="underline"></div>
@@ -22,13 +24,20 @@ const AboutPage = () => {
           </p>
           <img src={aboutImg} alt="about"/>
         </article>
+          </div>
+    </div>
       </Wrapper>
-    </main>
   );
 };
 
 const Wrapper = styled.section`
 
+
+.main-b{
+  background-color: var(--clr-grey-10);
+  height: 100vh;
+  
+}
   article{
 
     display: grid;
@@ -56,7 +65,7 @@ const Wrapper = styled.section`
     margin-left: 0;
   }
   @media (min-width: 992px) {
-    padding-bottom: 20rem;
+    padding-bottom: 0rem;
     article{
       gap: 8rem;
       grid-template-columns: 1fr 1fr;
