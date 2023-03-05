@@ -10,7 +10,7 @@ const AddToCart = (props) => {
   // from SingleProductPage
   const { single_product } = props;
   const { id, stock, colors } = single_product;
-  console.log(single_product);
+  // console.log(single_product);
 
   const [mainColor, setMainColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
@@ -66,6 +66,21 @@ const AddToCart = (props) => {
 
 const Wrapper = styled.section`
   margin-top: 2rem;
+  .btn-container {
+    margin-top: 2rem;
+
+
+  }
+
+
+  .hero-btn {
+    padding: 0.2rem 1rem;
+      font-size: 0.75rem;
+
+      margin: 0;
+      
+    }
+
   .colors {
     display: grid;
     grid-template-columns: 125px 1fr;
@@ -100,16 +115,28 @@ const Wrapper = styled.section`
   .active {
     opacity: 1;
   }
+
+
+  @media (max-width: 576px) {
   .btn-container {
     margin-top: 2rem;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
   }
 
 
   .hero-btn {
     padding: 0.75rem 2rem;
       font-size: 0.9rem;
+      width: 100%;
+      text-align: center;
       margin: 0;
       
     }
+  }
 `;
 export default AddToCart;

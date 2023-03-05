@@ -15,7 +15,7 @@ const Nav = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
+          <Link className="logo" to="/">
             <img src={logo} alt="logo" />
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
@@ -80,6 +80,20 @@ const NavContainer = styled.nav`
     display: none;
   }
   @media (min-width: 992px) {
+.logo{
+  animation: slideRight 1s ease forwards;
+}
+@keyframes slideRight {
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
     .nav-toggle {
       display: none;
     }

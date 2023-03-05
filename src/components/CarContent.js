@@ -54,5 +54,18 @@ margin-bottom: 10rem;
   .clear-btn {
     background: var(--clr-black);
   }
+  @media (max-width:576px){
+    .link-container{
+      flex-direction: column;
+      gap: 10px;
+    }
+    .link-btn{
+      padding: 0.25rem 0.5rem !important;
+      display: flex;
+      margin: 0rem;
+      
+      justify-content: center;
+    }
+  }
 `;
 export default CartContent;

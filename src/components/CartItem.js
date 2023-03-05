@@ -25,8 +25,11 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
           <h5 className="price-small">{formatPrice(price)}</h5>
         </div>
       </div>
+
       <h5 className="price">{formatPrice(price)}</h5>
+      <div className='amount'>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
+      </div>
       <h5 className="subtotal">{formatPrice(price * amount)}</h5>
       <button className="remove-btn" onClick={() => removeItem(id)}>
         <FaTrash />
@@ -37,40 +40,13 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
 
 
 const Wrapper = styled.article`
-  .subtotal {
-    display: none;
-  }
-  .price {
-    display: none;
-  }
-  display: grid;
-  grid-template-columns: 200px auto auto;
-  grid-template-rows: 55px;
-  gap: 1rem;
-  justify-items: center;
-  margin-bottom: 3rem;
-  align-items: center;
-  .title {
-    grid-template-rows: 75px;
-    display: grid;
-    grid-template-columns: 10px 125px;
-    align-items: center;
-    text-align: left;
-    gap: 1rem;
-  }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;    
-    object-fit: cover;
-  }
- 
-
+.subtotal{
+  display:none;
+} 
   h5 {
     font-size: 0.75rem;
     margin-bottom: 0;
   }
-
   .color {
     color: var(--clr-grey-5);
     font-size: 0.75rem;
@@ -118,7 +94,43 @@ const Wrapper = styled.article`
     font-size: 0.75rem;
     cursor: pointer;
   }
+
+@media (max-width: 576px){
+  .amount{    
+  grid-area: "amount";
+  
+}
+.remove-btn{
+  grid-area: remove;
+  
+}
+  .price {
+    display: none;
+  }
+
+  display: grid;  
+ grid-template-areas: 
+ "title amount remove"
+ ;
+  gap: 1rem;
+  justify-items: center;
+  margin-bottom: 3rem;
+  align-items: center;
+  .title {    
+    grid-area: "title";
+    display: flex;
+    align-items: stretch;       
+    text-align: left;
+    gap: 1rem;
+  }
+    img {
+    max-height: 50px;
+    /* display: none; */
+  }
+}
+
   @media (min-width: 776px) {
+    
     .subtotal {
       display: block;
       margin-bottom: 0;
@@ -129,6 +141,27 @@ const Wrapper = styled.article`
     .price-small {
       display: none;
     }
+    display: grid;
+  grid-template-columns: 200px 100px;
+  grid-template-rows: 55px;
+  gap: 1rem;
+  justify-items: center;
+  margin-bottom: 3rem;
+  align-items: center;
+  .title {
+    grid-template-rows: 75px;
+    display: grid;
+    grid-template-columns: 10px 125px;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+  }
+    img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;    
+    object-fit: cover;
+  }
     .price {
       display: block;
       font-size: 1rem;

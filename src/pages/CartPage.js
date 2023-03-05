@@ -30,6 +30,7 @@ const CartPage = () => {
 };
 
 const Wrapper = styled.main`
+padding-bottom: 3rem;
   .empty {
     text-align: center;
     h2 {

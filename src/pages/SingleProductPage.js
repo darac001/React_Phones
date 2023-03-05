@@ -66,7 +66,7 @@ const SingleProductPage = () => {
   return (
     <Wrapper>
       {/* <PageHero title={name} product /> */}
-      <div className="section section-center page">
+      <div className="section-center page">
        
         <div className=" product-center">
           <ProductImages images={images} />
@@ -97,6 +97,7 @@ const SingleProductPage = () => {
 };
 
 const Wrapper = styled.main`
+padding-top: 1rem;
   .product-center {
     display: grid;
     gap: 2rem;
@@ -133,6 +134,7 @@ const Wrapper = styled.main`
   }
 
   @media (min-width: 992px) {
+    padding-top: 5rem;
     .product-center {
       grid-template-columns: 400px 2fr;
       

@@ -33,5 +33,8 @@ margin-bottom: 10rem;
   .empty {
     text-align: center;
   }
+  @media (max-width: 992px) {
+    text-align: center;
+  }
 `;
 export default CheckoutPage;

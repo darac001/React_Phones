@@ -24,7 +24,7 @@ const ProductImages = (props) => {
             );
           })}
         </div>
-        <img src={main.url} alt="main" className="main" />
+        <img src={main.url} alt="main" className="main"/>
       </div>
     </Wrapper>
   );

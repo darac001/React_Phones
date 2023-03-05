@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components";
 const ProductDisplay = () => (
+  <Wrapper>
+
   <section>
     <div className="product">
-      <img
+      {/* <img
         src="https://i.imgur.com/EHyR2nP.png"
         alt="The cover of Stubborn Attachments"
-      />
+        />
       <div className="description">
         <h3>Stubborn Attachments</h3>
         <h5>$20.00</h5>
-      </div>
+      </div> */}
     </div>
     {/* <form action="/create-checkout-session" method="POST">
       <button type="submit">Checkout</button>
@@ -20,6 +22,7 @@ const ProductDisplay = () => (
             Checkout
           </Link>
   </section>
+    </Wrapper>
 );
 
 const Message = ({ message }) => (
@@ -48,3 +51,14 @@ export default function App() {
 
   return message ? <Message message={message} /> : <ProductDisplay />;
 }
+
+const Wrapper = styled.div`
+
+  @media (max-width: 992px) {
+    
+    text-align: center;
+    img{
+      width: 100px;
+    }
+  }
+`;

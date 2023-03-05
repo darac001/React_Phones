@@ -17,7 +17,7 @@ const CartButton = () => {
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         <span className="cart-container">
-          <img id="cart" src={carticon} alt="" />
+          <img id="cart" src={carticon} alt="cart" />
          
           <span className="cart-value">{total_items}</span>
         </span>
@@ -28,6 +28,7 @@ const CartButton = () => {
           className="auth-btn"
           onClick={() => {
             logout({ returnTo: window.location.origin });
+            
             clearCart();
           }}
         >

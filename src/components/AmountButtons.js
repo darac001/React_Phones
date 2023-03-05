@@ -18,12 +18,12 @@ const AmountButtons = ({ increase, decrease, amount }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  width: 160px;
+  width: 120px;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  h2 {
-    margin-bottom: 1rem;
+  h3 {
+    margin-bottom: 0rem;
   }
   button {
     background: transparent;

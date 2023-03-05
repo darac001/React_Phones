@@ -33,11 +33,7 @@ const AboutPage = () => {
 const Wrapper = styled.section`
 
 
-.main-b{
-  background-color: var(--clr-grey-10);
-  height: 100vh;
-  
-}
+
   article{
 
     display: grid;

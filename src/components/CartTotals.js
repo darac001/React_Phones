@@ -11,7 +11,7 @@ const CartTotals = () => {
 
   return (
     <Wrapper>
-      <div>
+      <div className="totals-container">
         <article>
           <h5>
             subtotal :<span>{formatPrice(total_amount)}</span>
@@ -42,10 +42,17 @@ const Wrapper = styled.section`
   margin-top: 3rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   article {
     border: 1px solid var(--clr-grey-8);
     border-radius: var(--radius);
     padding: 1.5rem 3rem;
+
+  }
+  .totals-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   h4,
   h5,
@@ -58,6 +65,16 @@ const Wrapper = styled.section`
   }
   h4 {
     margin-top: 2rem;
+  }
+  @media (max-width: 576px) {
+    .btn {
+    width: 80% !important;
+    border: none;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
   }
   @media (min-width: 776px) {
     justify-content: flex-end;
