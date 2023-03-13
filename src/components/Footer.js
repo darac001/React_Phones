@@ -32,13 +32,13 @@ const Footer = () => {
           <img src={logo2} alt="logo" />
         </Link>
         <div className="social-icons">
-          <a href="https://www.instagram.com/" target="_blank">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
             <BsInstagram />
           </a>
-          <a href="https://www.facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
             <BsFacebook />
           </a>
-          <a href="https://www.facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
             <BsMessenger />
           </a>
 

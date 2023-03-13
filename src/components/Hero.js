@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import bcgHero from '../assets/bcg-hero.jpg'
-import phone from "../assets/iphone-svgrepo-com.svg";
+
 const Hero = () => {
   return (
     
