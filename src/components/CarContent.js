@@ -49,6 +49,7 @@ margin-bottom: 10rem;
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
     font-weight: 400;
+    font-size: 14px !important;
     cursor: pointer;
   }
   .clear-btn {

@@ -32,12 +32,12 @@ const CartButton = () => {
             clearCart();
           }}
         >
-        <img className="logoutin" src={usericon} alt="" />Logout
+        <img className="logoutin" src={usericon} alt="" />LOGOUT
           
         </button>
       ) : (
         <button type="button" className="auth-btn" onClick={loginWithRedirect}>
-          <img className="logoutin" src={usericon} alt="" />Login
+          <img className="logoutin" src={usericon} alt="" />LOGIN
           
         </button>
       )}
@@ -91,7 +91,10 @@ const Wrapper = styled.div`
     align-items: center;
     background: transparent;
     border-color: transparent;
-    font-size: 1rem;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 0.3rem;
+   
     margin: 0rem;
     cursor: pointer;
     color: var(--clr-grey-1);

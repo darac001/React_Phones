@@ -35,9 +35,8 @@ const AddToCart = (props) => {
               <button
                 key={index}
                 style={{ background: color }}
-                className={`${
-                  mainColor === color ? "color-btn active" : "color-btn"
-                }`}
+                className={`${mainColor === color ? "color-btn active" : "color-btn"
+                  }`}
                 onClick={() => setMainColor(color)}
               >
                 {mainColor === color ? <FaCheck /> : null}
@@ -48,14 +47,15 @@ const AddToCart = (props) => {
       </div>
       <div className="btn-container">
         <AmountButtons
+        className="cart-btn-amount"
           amount={amount}
           increase={increase}
           decrease={decrease}
         />
         <Link
           to="/cart"
-          className="btn hero-btn"
-          onClick={() => addToCart(id, mainColor, amount,single_product)}
+          className="cart-btn"
+          onClick={() => addToCart(id, mainColor, amount, single_product)}
         >
           add to cart
         </Link>
@@ -67,19 +67,25 @@ const AddToCart = (props) => {
 const Wrapper = styled.section`
   margin-top: 2rem;
   .btn-container {
-    margin-top: 2rem;
-
-
-  }
-
-
-  .hero-btn {
-    padding: 0.2rem 1rem;
-      font-size: 0.75rem;
-
-      margin: 0;
-      
+    margin-top: 1rem;
     }
+
+  .cart-btn{
+ 
+    text-transform: uppercase;
+  background: var(--clr-primary-6);
+  color: var(--clr-primary-10);  
+  letter-spacing: var(--spacing);  
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 5rem;
+    padding: 0.5rem 1rem;
+  
+    }
+
 
   .colors {
     display: grid;
@@ -120,23 +126,34 @@ const Wrapper = styled.section`
   @media (max-width: 576px) {
   .btn-container {
     margin-top: 2rem;
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
   }
 
 
-  .hero-btn {
-    padding: 0.75rem 2rem;
-      font-size: 0.9rem;
+  .cart-btn {
+    text-transform: uppercase;
+  background: var(--clr-primary-6);
+  color: var(--clr-primary-10);
+  
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 5rem;
+    padding: 0.5rem 1rem;
+      font-size: 0.75rem;
       width: 100%;
-      text-align: center;
-      margin: 0;
-      
+      text-align: center; 
     }
+
+
   }
 `;
 export default AddToCart;

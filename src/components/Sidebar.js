@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
+import logo from "../assets/MOBILE-LOGO.png";
 import { Link } from 'react-router-dom'
 import { useSidebarContext } from '../context/sidebar_context'
 import { FaTimes } from 'react-icons/fa'

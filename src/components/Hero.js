@@ -19,7 +19,7 @@ const Hero = () => {
           </Link>
           
         </article>
-        <img className='phone' src={phone} alt="phone"></img>
+        {/* <img className='phone' src={phone} alt="phone"></img> */}
       </Wrapper>
     
   );
@@ -71,7 +71,7 @@ const Wrapper = styled.section`
       font-weight: 600;
     }
     p {
-      font-size: 1.6rem;
+      font-size: 26px !important;
     }
     .hero-btn {
       padding: 0.75rem 2rem;

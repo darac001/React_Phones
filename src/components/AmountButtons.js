@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  margin-bottom: 0.5rem;
   h3 {
     margin-bottom: 0rem;
   }

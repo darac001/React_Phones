@@ -245,7 +245,7 @@ const Wrapper = styled.section`
   .clear-btn {
     background: var(--clr-red-dark);
     color: var(--clr-white);
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.75rem;
     border-radius: var(--radius);
   }
   @media (min-width: 768px) {

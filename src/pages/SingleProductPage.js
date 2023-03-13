@@ -103,7 +103,7 @@ padding-top: 1rem;
     gap: 2rem;
     
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    padding-bottom: 10rem;
   }
   .arrow{
     display: flex;

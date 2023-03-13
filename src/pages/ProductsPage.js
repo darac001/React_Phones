@@ -21,6 +21,7 @@ const ProductsPage = () => {
 };
 
 const Wrapper = styled.div`
+padding-bottom: 10rem;
   .products {
     display: grid;
     gap: 3rem 1.5rem;
