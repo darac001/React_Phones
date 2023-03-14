@@ -86,7 +86,7 @@ const NavContainer = styled.nav`
   .cart-btn-wrapper {
     display: none;
   }
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
 .logo{
   animation: slideRight 1s ease forwards;
 }
@@ -113,11 +113,10 @@ const NavContainer = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
-      margin-right: 1rem;
-
+      
       li {
         margin-top: 0.3rem;
-        margin-right: 0.7rem;
+        margin-right: 1rem;
         font-weight: 700
         ;
       }
