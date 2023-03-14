@@ -97,7 +97,7 @@ const SingleProductPage = () => {
 };
 
 const Wrapper = styled.main`
-margin-bottom: 5rem;
+
 padding-top: 1rem;
   .product-center {
     display: grid;
@@ -135,6 +135,7 @@ padding-top: 1rem;
   }
 
   @media (min-width: 992px) {
+    margin-bottom: 10rem;
     padding-top: 5rem;
     .product-center {
       grid-template-columns: 400px 2fr;

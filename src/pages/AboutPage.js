@@ -31,7 +31,7 @@ const AboutPage = () => {
 };
 
 const Wrapper = styled.section`
-margin-bottom: 10rem;
+
 
 
   article{
@@ -61,6 +61,7 @@ margin-bottom: 10rem;
     margin-left: 0;
   }
   @media (min-width: 992px) {
+    margin-bottom: 10rem;
     padding-bottom: 0rem;
     article{
       gap: 8rem;
