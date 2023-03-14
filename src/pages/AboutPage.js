@@ -31,7 +31,7 @@ const AboutPage = () => {
 };
 
 const Wrapper = styled.section`
-
+margin-bottom: 10rem;
 
 
   article{

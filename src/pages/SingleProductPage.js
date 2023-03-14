@@ -97,6 +97,7 @@ const SingleProductPage = () => {
 };
 
 const Wrapper = styled.main`
+margin-bottom: 5rem;
 padding-top: 1rem;
   .product-center {
     display: grid;
